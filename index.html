@@ -469,15 +469,62 @@
             font-size: 1.1rem;
         }
 
-       @media (max-width: 768px) {
-    .header h1 {
-        font-size: 2rem;
+       /* 平板 */
+@media (max-width: 992px) {
+    .brand-big-text {
+        font-size: 4rem;
+    }
+    .typing-item {
+        font-size: 3rem;
+    }
+    .pricing-cards {
+        gap: 20px;
+    }
+}
+
+/* 手机 */
+@media (max-width: 768px) {
+    .brand-big-text {
+        font-size: 3rem;
+        letter-spacing: -2px;
+    }
+    .typing-item {
+        font-size: 2.5rem;
+    }
+    .pricing-cards {
+        grid-template-columns: 1fr;  /* 卡片变成一列 */
     }
     .pricing-card.popular {
-        transform: scale(1);
+        transform: scale(1);  /* 热门卡片不变大 */
     }
-    .pricing-card.popular:hover {
-        transform: translateY(-10px);
+    .features-section {
+        grid-template-columns: 1fr;  /* 特性也变成一列 */
+    }
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0;
+    }
+    .floating-nav h1 {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+}
+
+/* 小手机 */
+@media (max-width: 480px) {
+    .brand-big-text {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+    .typing-item {
+        font-size: 1.8rem;
+    }
+    .pricing-section h2 {
+        font-size: 2rem;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr;  /* 评价也一列 */
     }
 }
 
