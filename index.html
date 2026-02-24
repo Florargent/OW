@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲑头痛痛 | 全球首家专业拉玛刹陪伴服务商</title>
+    <style>
+        :root {
+            --primary: #5b21b6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .brand-big-text {
+            font-size: 6rem;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0px #fff, 0 0 20px rgba(102, 126, 234, 0.4);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background: #fff;
+            min-height: 100vh;
+            color: #333;
+            position: relative;
+            margin: 0;
+        }
+
+        .hero-section {
+            width: 100%;
+            height: 983.2px;
+            background: url('./picture/1.png') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-section::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, #fff 100%);
+             z-index: 1;
+         }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+            color: #333;
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .floating-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        
+
+        .floating-nav h1 {
+            font-size: 1.8rem;
+            color: #667eea;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin-left: 20px;
+            text-align: left;
+        }
+.typing-container {
+    height: 7rem;
+    margin: 0 0 20px 0; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typing-item {
+    position: absolute;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary);
+    letter-spacing: -2px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    opacity: 0;
+    animation: typing 9s infinite;
+    text-decoration: underline;            
+    text-underline-offset: 10px;            
+    text-decoration-thickness: 4px;          
+    text-decoration-color: var(--primary);    
+    text-decoration-skip-ink: none; 
+}
+
+.typing-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-item:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.typing-item:nth-child(3) {
+    animation-delay: 6s;
+}
+
+
+@keyframes typing {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    3% {
+        opacity: 1;
+    }
+    29% {
+        width: 100%;
+        opacity: 1;
+    }
+    33% {
+        width: 100%;
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;  
+        width: 100%;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+
+
+        .book-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 20px auto;
+            border: none;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            max-width: 150px;
+        }
+
+        .book-btn:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .pricing-btn {
+            display: block;
+            width: 80%;
+            margin: 20px auto 0;
+            padding: 12px 0;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .pricing-btn.popular-btn {
+            background: #ff6b6b;
+        }
+
+        .pricing-btn.popular-btn:hover {
+            background: #ff5252;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+
+        .intro-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .intro-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .pricing-section {
+            margin: 50px 0;
+        }
+
+        .pricing-section h2 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            scroll-margin-top: 4.5rem;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.popular {
+            transform: scale(1.05);
+            border: 3px solid #ff6b6b;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #999;
+            font-weight: normal;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list li::before {
+            content: "✓ ";
+            color: #51cf66;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .testimonials-section {
+            margin: 50px 0;
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stars {
+            color: #ffd43b;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: #666;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer .chat-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.1rem;
+        }
+
+       @media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* 👇 把这个加在最末尾 */
+html {
+    scroll-behavior: smooth;
+}
+    </style>
+</head>
+<body>
+    <div class="floating-nav">
+        <h1>🐟 鲑头痛痛的</h1>
+    </div>
+    <div class="hero-section">
+        <div class="hero-content">
+
+            <h1 class="brand-big-text">鲑头痛痛的</h1>
+            <p style="font-size: 4rem; margin-bottom: 0; color: #333; font-weight: 600; line-height: 1;">在这里，你可以拥有</p>
+            <div class="typing-container">
+                <div class="typing-item">爱玩源神的社恐男大</div>
+                <div class="typing-item">陪你一起犯唐的bro</div>
+                <div class="typing-item">激素圣的和尚</div>
+            </div>
+            <p style="font-size: 1.1rem; margin-bottom: 30px; color: #333;">
+                无论是深夜的激素源氏玩家，还是孤独的后排辅助。
+                <br>
+                我们提供全网最专业的智械情感陪伴解决方案。
+            </p>
+            <a href="#tiaozhuan" class="book-btn">立即预订</a>
+        </div>
+    </div>
+    <div class="container">
+
+
+
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>精准格挡服务</h3>
+                <p>即使你玩源氏开E反弹，我的格挡也永远只挡给你一个人。甚至可以为你吸所有大招，绝不卖队友。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌊</div>
+                <h3>沉浸式剧本</h3>
+                <p>支持尼泊尔看雪、漓江塔看鱼、掉分甩锅等多种剧本。给你主角般的体验，仿佛置身OW剧情模式。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🥰</div>
+                <h3>情绪价值拉满</h3>
+                <p>无论输赢，永远是甜甜的鼓励。哪怕你开格挡原地罚站被集火秒掉，我也夸你减伤拉满，这就是爱。</p>
+            </div>
+        </div>
+
+        <div class="pricing-section">
+            <h2 id="tiaozhuan">服务套餐</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>快速娱乐版</h3>
+                    <div class="price">¥29<span>/局</span></div>
+                    <ul class="features-list">
+                        <li>仅限快速模式 (不掉分)</li>
+                        <li>精通拉玛刹/温斯顿</li>
+                        <li>基础语音沟通 (低音炮音色)</li>
+                        <li>拒绝一切无理要求</li>
+                    </ul>
+                    <a href="#" class="pricing-btn">选择此套餐</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-tag">人气之选</div>
+                    <h3>抱头战神版</h3>
+                    <div class="price">¥199<span>/晚</span></div>
+                    <ul class="features-list">
+                        <li>天梯/自定义不限</li>
+                        <li>拉玛刹专精 (包格挡)</li>
+                        <li>包含“尼泊尔看雪”剧本</li>
+                        <li>支持深夜掉分吐槽</li>
+                        <li>赠送：隔壁理工男人设</li>
+                    </ul>
+                    <a href="tiaozhuan" class="pricing-btn popular-btn">立刻订阅</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>鲑鱼契约版</h3>
+                    <div class="price">All In<span>/永久</span></div>
+                    <ul class="features-list">
+                        <li>24小时随叫随到</li>
+                        <li>解锁线下：网吧/电竞酒店</li>
+                        <li>包含“掉分甩锅”隐藏剧本</li>
+                        <li>承诺：一辈子只挡你</li>
+                        <li>不保证真的是本人</li>
+                    </ul>
+                    <a href="#" class="pricing-btn">签订契约</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials-section">
+            <h2>用户评价</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">“本来只是想找个主T上分，结果他真的带我去了尼泊尔，还说要挡一辈子。虽然最后大招拍空了，但那是最好的回忆。”</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">“我是玩源氏的，以前T都骂我是激素野人，只有他一直把格挡留给我。五星好评。”</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">“他说他是隔壁城市的理工男，结果见面那天穿了拉玛刹的cos服。兄弟们，这网站是真的，不说了我又要下单了。”</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">“不是托！当初因为这个网站我找到了我的命定之人，现在我们准备结婚了，特意过来感谢站长，愿大伙也能遇到与自己相伴一生的T。”</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">“在这个网站找到了属于自己的拉玛刹固排男友！我们已经准备领证啦”</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">“听说刷好评可以获得鲑头痛痛的好友申请，为什么我的鲑鱼大帝还没有找到我的战网ID”</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="chat-icon">💬</div>
+            <p>© 2026 鲑头痛痛 - 全球首家专业拉玛刹陪伴服务商</p>
+        </div>
+    </div>
+</body>
+</html>
