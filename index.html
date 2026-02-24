@@ -481,10 +481,243 @@
     }
 }
 
-/* 👇 把这个加在最末尾 */
 html {
     scroll-behavior: smooth;
 }
+/* 苹果风格弹窗 */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    max-width: 90%;
+    z-index: 10000;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.popup-header {
+    padding: 20px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.popup-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #86868b;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #1d1d1f;
+}
+
+.popup-content {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.emoji {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.message {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+}
+
+.sub-message {
+    font-size: 1rem;
+    color: #86868b;
+    margin: 0;
+}
+
+.popup-footer {
+    padding: 15px 20px 20px;
+    text-align: center;
+}
+
+.popup-btn {
+    background: #0071e3;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 40px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.popup-btn:hover {
+    background: #0077ed;
+    transform: scale(1.02);
+}
+
+.popup-btn:active {
+    transform: scale(0.98);
+}/* 苹果风格弹窗 */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    max-width: 90%;
+    z-index: 10000;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.popup-header {
+    padding: 20px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.popup-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #86868b;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #1d1d1f;
+}
+
+.popup-content {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.emoji {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.message {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+}
+
+.sub-message {
+    font-size: 1rem;
+    color: #86868b;
+    margin: 0;
+}
+
+.popup-footer {
+    padding: 15px 20px 20px;
+    text-align: center;
+}
+
+.popup-btn {
+    background: #0071e3;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 40px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.popup-btn:hover {
+    background: #0077ed;
+    transform: scale(1.02);
+}
+
+.popup-btn:active {
+    transform: scale(0.98);
+}
+
     </style>
 </head>
 <body>
@@ -501,8 +734,8 @@ html {
                 <div class="typing-item">陪你一起犯唐的bro</div>
                 <div class="typing-item">激素圣的和尚</div>
             </div>
-            <p style="font-size: 1.1rem; margin-bottom: 30px; color: #333;">
-                无论是深夜的激素源氏玩家，还是孤独的后排辅助。
+            <p style="font-size: 1.4rem; margin-bottom: 30px; color: #333;">
+                无论是被堡垒和尚集火的坦克，还是被莫名草飞的后排辅助。
                 <br>
                 我们提供全网最专业的智械情感陪伴解决方案。
             </p>
@@ -557,7 +790,7 @@ html {
                         <li>支持深夜掉分吐槽</li>
                         <li>赠送：隔壁理工男人设</li>
                     </ul>
-                    <a href="tiaozhuan" class="pricing-btn popular-btn">立刻订阅</a>
+                    <a href="javascript:void(0);" onclick="openPopup()" class="pricing-btn popular-btn">立刻订阅</a>
                 </div>
 
                 <div class="pricing-card">
@@ -610,5 +843,42 @@ html {
             <p>© 2026 鲑头痛痛 - 全球首家专业拉玛刹陪伴服务商</p>
         </div>
     </div>
+    <!-- 弹窗遮罩层 -->
+<div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
+
+<!-- 弹窗内容 -->
+<div id="popup" class="popup">
+    <div class="popup-header">
+        <h3>鲑头痛痛</h3>
+        <button class="close-btn" onclick="closePopup()">✕</button>
+    </div>
+    <div class="popup-content">
+        <div class="emoji">🫥</div>
+        <p class="message">这里什么都木有</p>
+        <p class="sub-message">要不...再看看别的套餐？</p>
+    </div>
+    <div class="popup-footer">
+        <button class="popup-btn" onclick="closePopup()">好的</button>
+    </div>
+</div>
+
+<script>
+function openPopup() {
+    document.getElementById('popupOverlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+}
+
+// 点击ESC键关闭弹窗
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closePopup();
+    }
+});
+</script>
 </body>
 </html>
